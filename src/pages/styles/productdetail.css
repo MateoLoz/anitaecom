@@ -72,6 +72,15 @@ grid-gap: 8px;
     border-radius: 2px;
     transition: color ease 250ms , background-color ease 350ms ;
 }
+.article-size-selected {
+    background-color: rgb(24,24,24);
+    color: white;
+    text-align: center;
+    height: 30px;
+   border-radius: 2px;
+   transition: color ease 250ms , background-color ease 350ms ;
+}
+
 
 .article-size:hover {
     color: white;

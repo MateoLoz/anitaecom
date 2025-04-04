@@ -3,9 +3,16 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    background: rgba(242,242,242,255);
+    font-family: 'Heebo';
+    scrollbar-color: rgb(37, 37, 37); 
+    scrollbar-width: thin;
+    scroll-snap-type: none;
 }
+
+:root {
+    --fontCard-primary:"Nunito Sans", sans serif
+}
+
 
 .mainContainer
 {
@@ -19,38 +26,48 @@
     gap: 40px;
     align-items: center;
     padding: 0 10rem;
-    background-color: #ffffff;
-    
+    background-color: #ffffff; 
 
-    
+
 }
 
 .mainContainer .box
 {
-    background: #f2f2f2;
+   
     text-align: center;
     transition: .3s ease-in-out;
-    border-radius: 3%;
     margin-top: 5%;
+  
 }
 
-.mainContainer .box:hover{
-    box-shadow: rgba(17,12,46,0.15) 0px 48px 100px 0px;
-    transform: scale(1.05);
-}
+
 
 .mainContainer .card {
-    padding:15px 15px 0;
+    padding:5px 15px 0;
+    border: none;
+
+
 }
 
 .card .image
 {
     display: flex;
-    justify-content: center;
-    
-    background: #f9f9f9;
+    justify-content: center;   
+    align-items: center;
     margin: 10px auto 25px;
     position: relative;
+    transition: display ease 300ms ;
+    
+}
+
+
+.card-active {
+    display: "flex";
+}
+
+.card-desactive {
+    display: none;
+
 }
 
 .card .image:before
@@ -66,27 +83,38 @@
 }
 .card .image img
 {
-    width: 180px;
+    aspect-ratio: 4/3;
+    width: 100%;
+    height: 400px;
     transition: .3s ease-in-out;
+    background-color: #ebdecf;
 }
 
-
-.card .image:hover img{
-    transform: scale(1.03);
-}
 
 .card .desc
 {
     width:80%;
-    margin: auto;
+    text-align: left;
+    margin-left: 20px;
     margin-bottom: 20px;
+    background-color: #ffffff;
 }
 
-.card .desc h1
-{
+
+.title-card{
+    font-family: var(--fontCard-primary);
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 400;
     text-transform: uppercase;
+    background-color: #ffffff;
+}
+
+.price-card{
+    font-family: var(--fontCard-primary);
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: #ffffff;
 }
 
 .card .desc p
@@ -95,13 +123,6 @@
     margin: 10px 0 20px;
 }
 
-.card span{
-    font-size: 20px;
-}
 
-.card
-{
-    border-color: darkgrey;
-    border: 10px;
-}
+
 

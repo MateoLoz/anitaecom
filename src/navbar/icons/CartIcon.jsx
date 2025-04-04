@@ -1,7 +1,7 @@
 export const CartIcon = () => {
     return (
         <>
-        <svg data-v-8511a203="" width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="block-header-cart__icon"><path data-v-8511a203="" fillRule="evenodd" clipRule="evenodd" d="M5.94636 5.35922C6.29451 3.00506 7.9363 1.39824 9.67973
+        <svg data-v-8511a203="" width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path data-v-8511a203="" fillRule="evenodd" clipRule="evenodd" d="M5.94636 5.35922C6.29451 3.00506 7.9363 1.39824 9.67973
 						1.39824C11.4232 1.39824 13.0649 3.00506
 						13.4131 5.35922H5.94636ZM4.53847 5.35922C4.90317 2.43147
 						6.95866 0.000183105 9.67973 0.000183105C12.4008

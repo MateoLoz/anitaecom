@@ -1,11 +1,14 @@
 const Data = [
 {
    id:1,
-   image: "https://cloud.camper.com/is/image/JGVzaG9wMDNtYmlnZ3JleSQ=/AU00006-002_LF.jpg",
+   image: [
+    "https://i.postimg.cc/50XyWkjj/AU00006-009-LF-removebg-preview.png",
+    "https://cloud.camper.com/is/image/YnJldW5pbmdlcjAx/AU00006-009_01WF.jpg"
+    ],
    titulo:"Jean Mom ",
    ProductInfo:"Jean Mom basico ",
    descripcion: "Tejido mezcla de algodón. Tejido de algodón estilo tejano vaquero. Tejido elástico. Mom-fit. Ankle brace. Cinco bolsillos. Trabillas. Cierre de cremallera y botón. Disponible Plus. Largo interior 70 cm.",
-   precio: "90.000",
+   precio: "90000",
    talles:[
       24,
       26,
@@ -15,11 +18,11 @@ const Data = [
 },
 {
     id:2,
-    image: "//f.fcdn.app/imgs/481ba9/gap.com.uy/gapuy/ec06/webp/catalogo/000620681_G107_1/858x1287/campera-de-jean-nina-medium-wash.jpg",
+    image: ["https://i.postimg.cc/Gp53KJzR/AU00006-002-LF-removebg-preview.png","https://i.postimg.cc/m2mmFNvS/AU00006-002-01-WF.jpg"],
     titulo:"Campera Jean  ",
     ProductInfo:"Campera de jean verano",
     descripcion: "Tejido mezcla de algodón. Tejido de algodón estilo tejano vaquero. Tejido elástico. Mom-fit. Ankle brace. Cinco bolsillos. Trabillas. Cierre de cremallera y botón. Disponible Plus. Largo interior 70 cm.",
-    precio: "90.000",
+    precio: "90000",
     talles:[
       24,
       26,
@@ -29,11 +32,11 @@ const Data = [
  },
  {
     id:3,
-    image: "https://cloud.camper.com/is/image/JGVzaG9wMDNtYmlnZ3JleSQ=/AU00006-002_LF.jpg",
+    image: ["https://i.postimg.cc/Gp53KJzR/AU00006-002-LF-removebg-preview.png","https://i.postimg.cc/m2mmFNvS/AU00006-002-01-WF.jpg"],
     titulo:"Jean Mom ",
     ProductInfo:"Jean Mom basico ",
     descripcion: "Tejido mezcla de algodón. Tejido de algodón estilo tejano vaquero. Tejido elástico. Mom-fit. Ankle brace. Cinco bolsillos. Trabillas. Cierre de cremallera y botón. Disponible Plus. Largo interior 70 cm.",
-    precio: "90.000",
+    precio: "90000",
     talles:[
       24,
       26,
@@ -43,11 +46,11 @@ const Data = [
  },
  {
     id:4,
-    image: "https://cloud.camper.com/is/image/JGVzaG9wMDNtYmlnZ3JleSQ=/AU00006-002_LF.jpg",
+    image: ["https://i.postimg.cc/Gp53KJzR/AU00006-002-LF-removebg-preview.png","https://i.postimg.cc/m2mmFNvS/AU00006-002-01-WF.jpg"],
     titulo:"Jean Mom ",
     ProductInfo:"Jean Mom basico ",
     descripcion: "Tejido mezcla de algodón. Tejido de algodón estilo tejano vaquero. Tejido elástico. Mom-fit. Ankle brace. Cinco bolsillos. Trabillas. Cierre de cremallera y botón. Disponible Plus. Largo interior 70 cm.",
-    precio: "90.000",
+    precio: "90000",
     talles:[
       24,
       26,
@@ -57,11 +60,11 @@ const Data = [
  },
  {
     id:5,
-    image: "https://cloud.camper.com/is/image/JGVzaG9wMDNtYmlnZ3JleSQ=/AU00006-002_LF.jpg",
+    image: ["https://i.postimg.cc/Gp53KJzR/AU00006-002-LF-removebg-preview.png","https://i.postimg.cc/m2mmFNvS/AU00006-002-01-WF.jpg"],
     titulo:"Jean Mom ",
     ProductInfo:"Jean Mom basico ",
     descripcion: "Tejido mezcla de algodón. Tejido de algodón estilo tejano vaquero. Tejido elástico. Mom-fit. Ankle brace. Cinco bolsillos. Trabillas. Cierre de cremallera y botón. Disponible Plus. Largo interior 70 cm.",
-    precio: "90.000",
+    precio: "90000",
     talles:[
       24,
       26,

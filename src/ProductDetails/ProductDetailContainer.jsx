@@ -1,7 +1,8 @@
 import { useState } from "react"
-export const ProductDetailContainer = ({nombre , brevedescrip , precio , talles , descripcion}) => {
-
-    const [drop,setdrop] = useState(false)
+import { useCart } from "../Cart/hook/useCart"
+export const ProductDetailContainer = ({ id,  img , nombre , brevedescrip , precio , talles , descripcion}) => {
+    
+  const [drop,setdrop] = useState(false)
     
     const handleDropDown = () => {
     
@@ -25,6 +26,8 @@ export const ProductDetailContainer = ({nombre , brevedescrip , precio , talles 
     return setdrop(!drop)
     }
 
+    const {updateCart,updateSize,size} = useCart()
+
     return(
         <>
            <section className="productdetails-container">
@@ -37,16 +40,16 @@ export const ProductDetailContainer = ({nombre , brevedescrip , precio , talles 
               </div>
              <small>Elegi tu talla (Us)</small>
              <section className="product-details-size">
-                {talles.map((size)=> (
+                {talles.map((talle)=> (
                     <>
-                <article className="article-size">
-                  {size}
+                <article key={talle} className={ size == talle ? "article-size-selected" : "article-size"} onClick={()=> updateSize(talle)}>
+                  {talle}
                </article>
                     </>
                 ))}
              
              </section>
-             <button className="btn-addToCart">Añadir al carrito</button>
+             <button className="btn-addToCart" onClick={()=>updateCart({id, img,nombre,precio})}>Añadir al carrito</button>
 
              <small>Envio gratuito a partir de AR $xxx.xxx</small>
              <section className="descripcion-container">

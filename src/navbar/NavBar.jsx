@@ -5,6 +5,7 @@ import './style/navbar.css'
 import { HamburgerMenu } from "./components/HamburguerMenu"
 import { useMenu } from "./hook/useWidth"
 import { Modal } from "./components/Modal"
+import { Cart } from "../Cart/Cart"
 
 export const NavBar = () => {
     return(
