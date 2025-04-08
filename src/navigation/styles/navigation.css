@@ -1,0 +1,28 @@
+.navigation-container{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    gap: 0.7rem;
+    justify-content: center;
+    align-items: center;
+}
+.navigation-btn {
+    width: 40px;
+    border-radius: 1px solid gray;
+    background: none;
+}
+
+.current-page {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    font-family: "inter",sans-serif;
+    font-size: large;
+    color: black;
+}
+
+.rotate {
+    rotate: 180deg;
+}

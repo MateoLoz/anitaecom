@@ -1,4 +1,4 @@
-import { Footer } from "../../Footer/Footer"
+import { Footer } from "../Footer/Footer"
 import { Cart } from "../Cart/Cart"
 import { useCart } from "../Cart/hook/useCart"
 import { EvalNav } from '../navbar/navbar'

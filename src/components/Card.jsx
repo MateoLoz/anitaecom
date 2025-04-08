@@ -1,13 +1,15 @@
-import Data from "./Data";
+
 import './Card.css'
 import { useNavigate } from "react-router";
 import { useHref } from "react-router";
 import { useState } from "react";
+import { useProducts } from "../hooks/useProducts";
 
 export const Card = () => {
 
   let href = useHref("/productDetail")
   const navigate = useNavigate()
+const {itemsinPage} = useProducts()
 
 const handleDetail = (prod) => {
 const {id, titulo , image , ProductInfo , descripcion , precio, talles} = prod
@@ -46,7 +48,7 @@ return (
        <div className="mainContainer">
 
         {
-          Data.map((el)=>(
+          itemsinPage.map((el)=>(
            
              <>
                  <div key={el.id} className="box" onClick={()=> handleDetail(el)}>

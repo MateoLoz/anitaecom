@@ -2,10 +2,14 @@
 import { RemoveIcon } from "../icons/RemoveIcon"
 import { CheckOut } from "./components/CheckOut"
 import { useCart } from "./hook/useCart"
+
 import './style/cart.css'
 
 export const Cart = () => {
+
   const {openCart} = useCart()
+
+
 return(
     <>
     <div className="padre">
@@ -67,7 +71,7 @@ const CartItem = ({id, img,nombre,talle,precio }) => {
          </section>
 
          <section className="details">
-                <h2>{nombre}</h2>
+                <h2 className="title-prod">{nombre}</h2>
                 <span className="talle">Us {talle}</span>
                 <span className="price">Ars: ${precio}</span>
          </section>

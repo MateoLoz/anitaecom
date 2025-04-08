@@ -8,7 +8,7 @@ const Data = [
    titulo:"Jean Mom ",
    ProductInfo:"Jean Mom basico ",
    descripcion: "Tejido mezcla de algodón. Tejido de algodón estilo tejano vaquero. Tejido elástico. Mom-fit. Ankle brace. Cinco bolsillos. Trabillas. Cierre de cremallera y botón. Disponible Plus. Largo interior 70 cm.",
-   precio: "90000",
+   precio: "9000",
    talles:[
       24,
       26,
@@ -71,7 +71,105 @@ const Data = [
       28,
       30
     ]
- }
+ },
+ {
+  id:5,
+  image: ["https://i.postimg.cc/Gp53KJzR/AU00006-002-LF-removebg-preview.png","https://i.postimg.cc/m2mmFNvS/AU00006-002-01-WF.jpg"],
+  titulo:"Jean Mom ",
+  ProductInfo:"Jean Mom basico ",
+  descripcion: "Tejido mezcla de algodón. Tejido de algodón estilo tejano vaquero. Tejido elástico. Mom-fit. Ankle brace. Cinco bolsillos. Trabillas. Cierre de cremallera y botón. Disponible Plus. Largo interior 70 cm.",
+  precio: "90000",
+  talles:[
+    24,
+    26,
+    28,
+    30
+  ]
+},
+{
+  id:5,
+  image: ["https://i.postimg.cc/Gp53KJzR/AU00006-002-LF-removebg-preview.png","https://i.postimg.cc/m2mmFNvS/AU00006-002-01-WF.jpg"],
+  titulo:"Jean Mom ",
+  ProductInfo:"Jean Mom basico ",
+  descripcion: "Tejido mezcla de algodón. Tejido de algodón estilo tejano vaquero. Tejido elástico. Mom-fit. Ankle brace. Cinco bolsillos. Trabillas. Cierre de cremallera y botón. Disponible Plus. Largo interior 70 cm.",
+  precio: "90000",
+  talles:[
+    24,
+    26,
+    28,
+    30
+  ]
+},
+{
+  id:5,
+  image: ["https://i.postimg.cc/Gp53KJzR/AU00006-002-LF-removebg-preview.png","https://i.postimg.cc/m2mmFNvS/AU00006-002-01-WF.jpg"],
+  titulo:"Jean Mom ",
+  ProductInfo:"Jean Mom basico ",
+  descripcion: "Tejido mezcla de algodón. Tejido de algodón estilo tejano vaquero. Tejido elástico. Mom-fit. Ankle brace. Cinco bolsillos. Trabillas. Cierre de cremallera y botón. Disponible Plus. Largo interior 70 cm.",
+  precio: "90000",
+  talles:[
+    24,
+    26,
+    28,
+    30
+  ]
+},
+{
+  id:5,
+  image: ["https://i.postimg.cc/Gp53KJzR/AU00006-002-LF-removebg-preview.png","https://i.postimg.cc/m2mmFNvS/AU00006-002-01-WF.jpg"],
+  titulo:"Jean Mom ",
+  ProductInfo:"Jean Mom basico ",
+  descripcion: "Tejido mezcla de algodón. Tejido de algodón estilo tejano vaquero. Tejido elástico. Mom-fit. Ankle brace. Cinco bolsillos. Trabillas. Cierre de cremallera y botón. Disponible Plus. Largo interior 70 cm.",
+  precio: "90000",
+  talles:[
+    24,
+    26,
+    28,
+    30
+  ]
+},
+{
+  id:5,
+  image: ["https://i.postimg.cc/Gp53KJzR/AU00006-002-LF-removebg-preview.png","https://i.postimg.cc/m2mmFNvS/AU00006-002-01-WF.jpg"],
+  titulo:"Jean Mom ",
+  ProductInfo:"Jean Mom basico ",
+  descripcion: "Tejido mezcla de algodón. Tejido de algodón estilo tejano vaquero. Tejido elástico. Mom-fit. Ankle brace. Cinco bolsillos. Trabillas. Cierre de cremallera y botón. Disponible Plus. Largo interior 70 cm.",
+  precio: "90000",
+  talles:[
+    24,
+    26,
+    28,
+    30
+  ]
+},
+{
+  id:5,
+  image: ["https://i.postimg.cc/Gp53KJzR/AU00006-002-LF-removebg-preview.png","https://i.postimg.cc/m2mmFNvS/AU00006-002-01-WF.jpg"],
+  titulo:"Jean Mom ",
+  ProductInfo:"Jean Mom basico ",
+  descripcion: "Tejido mezcla de algodón. Tejido de algodón estilo tejano vaquero. Tejido elástico. Mom-fit. Ankle brace. Cinco bolsillos. Trabillas. Cierre de cremallera y botón. Disponible Plus. Largo interior 70 cm.",
+  precio: "90000",
+  talles:[
+    24,
+    26,
+    28,
+    30
+  ]
+},
+{
+  id:5,
+  image: ["https://i.postimg.cc/Gp53KJzR/AU00006-002-LF-removebg-preview.png","https://i.postimg.cc/m2mmFNvS/AU00006-002-01-WF.jpg"],
+  titulo:"Jean Mom ",
+  ProductInfo:"Jean Mom basico ",
+  descripcion: "Tejido mezcla de algodón. Tejido de algodón estilo tejano vaquero. Tejido elástico. Mom-fit. Ankle brace. Cinco bolsillos. Trabillas. Cierre de cremallera y botón. Disponible Plus. Largo interior 70 cm.",
+  precio: "90000",
+  talles:[
+    24,
+    26,
+    28,
+    30
+  ]
+}
 
 ]
 

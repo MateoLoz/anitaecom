@@ -142,9 +142,12 @@ align-items: center;
     padding: 0.4em;
     color: white;
 }
-
+.title-prod{
+    font-size: large;
+}
 .empty-car{
     text-align: center;
+    font-size: medium;
 }
 
 

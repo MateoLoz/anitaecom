@@ -52,7 +52,6 @@ const removeItemCart = (id) => {
     let arr = cart
     let res = arr.findIndex( item => item.id == id)
     arr.splice(res,1)
-    console.log(arr,res)
      window.localStorage.setItem('cart',JSON.stringify(arr))
       setCart(arr)
       getFinalPrice()

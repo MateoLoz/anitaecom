@@ -1,0 +1,10 @@
+.filter-container {
+    width: 99%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.select option:active {
+    background: rgb(66, 66, 66);
+}

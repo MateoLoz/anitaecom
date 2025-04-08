@@ -14,6 +14,7 @@ const [cartitems,setCartItems] = useState(initialcartcount)
 const [size,setSize] = useState(initialStateSize)
 const [finalprice,setFinalPrice] = useState(initialFinalPrice)
 const [open,setOpen] = useState(initialStateModal)
+const [preference,setpreference] = useState(null)
 return(
     <CartContext.Provider value={{
         cart,
@@ -25,7 +26,9 @@ return(
         finalprice,
         setFinalPrice,
         open,
-        setOpen
+        setOpen,
+        preference,
+        setpreference
     }}>
      {children}
     </CartContext.Provider>

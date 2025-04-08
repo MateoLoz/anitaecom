@@ -6,6 +6,7 @@ import { ProductDetailContainer } from "../ProductDetails/ProductDetailContainer
 import { Cart } from "../Cart/Cart"
 import { useLocation } from "react-router"
 import { useCart } from "../Cart/hook/useCart"
+import {Footer} from '../footer/Footer'
 export const ProductDetailPage = () => {
     const location = useLocation()
 const {open} = useCart()
@@ -24,7 +25,10 @@ const { id ,titulo , image , ProductInfo , descripcion , precio, talles} = locat
       </> 
       : <h4>No se encontro el producto!</h4>
       }
-  
+      
+      <footer>
+       <Footer/>
+      </footer>
         
       </div>
     </>)
