@@ -1,0 +1,26 @@
+.nav-link {
+  font-size: 1.2rem; /* Aumentar tamaño de letra */
+  font-weight: 600;
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+.nav-link:hover {
+  color: #6351ce; /* Color similar al logo */
+  transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.nav-link:active {
+  color: #4a39a3; /* Color más oscuro para el estado activo */
+}
+
+.logo-img {
+  width: 180px; /* Aumentar tamaño del logo */
+  height: 110px;
+  transition: all 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05); /* Efecto de zoom suave */
+  filter: brightness(1.05);
+}

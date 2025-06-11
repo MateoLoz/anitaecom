@@ -11,7 +11,7 @@ export const NavBar = () => {
     return(
         <>
         <div className="navbar">
-           <LogoSection  size={'36px'}/>
+           <LogoSection  size={'180px'}/>
           <NavSection/>
           <CartSection/>
         </div>
