@@ -1,0 +1,41 @@
+.footer-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Asegurar que el contenido principal tenga suficiente espacio */
+.main-content {
+  min-height: 100vh;
+  margin-bottom: 150px; /* Aumentar el margen para evitar superposición */
+}
+
+/* Estilo estándar para el footer */
+footer {
+  margin: 0;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Asegurar que el footer esté al final de la página */
+body {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Asegurar que el contenido principal ocupe el espacio disponible */
+body > div {
+  flex: 1;
+}
+
+/* Asegurar que el contenido no se superponga con el footer */
+.page-container {
+  margin-bottom: 150px; /* Aumentar el margen para evitar superposición */
+}

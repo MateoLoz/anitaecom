@@ -16,14 +16,16 @@ const App = () => {
 
 
   return (
-    <Router>
-      <Routes>
-      <Route path="/" element={<HomePage/> } />
-      <Route path="/products" element={<ProductsPage/> } />
-      <Route path="/productDetail" element={<ProductDetailPage/> } />
-      <Route path="/checkout" element={<CheckOutPage/>}/>
-      </Routes>
-    </Router>
+    <div className="page-container">
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage/> } />
+          <Route path="/products" element={<ProductsPage/> } />
+          <Route path="/productDetail" element={<ProductDetailPage/> } />
+          <Route path="/checkout" element={<CheckOutPage/>}/>
+        </Routes>
+      </Router>
+    </div>
   );
 };
 
