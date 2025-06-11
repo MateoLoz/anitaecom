@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Link } from "react-router"
+import { Link } from "react-router-dom"
 
 export const NavSection = () => {
     const [selected,setselected] = useState(false)
@@ -28,8 +28,8 @@ localStorage.setItem('selected', element)
          <nav className="navigation">
                 <ul className="ul-list" onClick={(e)=> handleSelect(e)}>
                   <li  className={selected ? 'selected' :  null}><Link className="product" to="/products" id="product"> Productos</Link></li>
-                  <li ><Link className="product" to="/products"  id="about-us">Sobre Nosotros</Link></li>
-                  <li ><Link to="/products"  id="contact">Contactanos</Link></li>
+                  <li ><Link className="product" to="/about"  id="about-us">Sobre Nosotros</Link></li>
+                  <li ><Link to="/contact"  id="contact">Contactanos</Link></li>
                 </ul>
                 
             </nav>

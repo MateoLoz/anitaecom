@@ -15,6 +15,16 @@ const [size,setSize] = useState(initialStateSize)
 const [finalprice,setFinalPrice] = useState(initialFinalPrice)
 const [open,setOpen] = useState(initialStateModal)
 const [preference,setpreference] = useState(null)
+
+// Función para vaciar el carrito
+const clearCart = () => {
+  setCart([]);
+  localStorage.removeItem('cart');
+  setCartItems(0);
+  setFinalPrice(0);
+  localStorage.removeItem('final');
+};
+
 return(
     <CartContext.Provider value={{
         cart,
@@ -28,7 +38,8 @@ return(
         open,
         setOpen,
         preference,
-        setpreference
+        setpreference,
+        clearCart
     }}>
      {children}
     </CartContext.Provider>
