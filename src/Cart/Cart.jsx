@@ -49,7 +49,7 @@ const RowedCartItems = () => {
     <>
        <main className="content-cart">
        {cart.map(item => (
-        <CartItem id={item.id} img={item.img} nombre={item.nombre} talle={item.talle} precio={item.precio}/>
+        <CartItem id={item.id} imagen={item.imagen} nombre={item.titulo} talle={item.talle} precio={item.precio}/>
        ))}
      </main>
 
@@ -61,13 +61,13 @@ const RowedCartItems = () => {
 }
 
 
-const CartItem = ({id, img,nombre,talle,precio }) => {
+const CartItem = ({id, imagen,nombre,talle,precio }) => {
   const {removeItemCart} = useCart()
   return (
     <>
     <article className="items-in-cart" key={id}>
          <section>
-            <img className="img-content" src={img} alt="" />
+            <img className="img-content" src={imagen} alt="" />
          </section>
 
          <section className="details">

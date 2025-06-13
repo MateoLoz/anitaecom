@@ -4,21 +4,17 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './styles/checkout.css';
 import { CartContext } from '../../context/CartContext';
+import { useCart } from '../../Cart/hook/useCart';
+import axios from 'axios';
 
 export const CheckoutPage = () => {
   const navigate = useNavigate();
+  const {cart,finalprice} = useCart()
   const [formData, setFormData] = useState({
     email: '',
-    name: '',
-    lastName: '',
-    address: '',
-    postalCode: '',
-    city: '',
-    phone: '',
-    shippingMethod: 'standard',
-    paymentMethod: 'card',
+    provincia: '',
+    direccion:'',
   });
-  const [paymentVisible, setPaymentVisible] = useState(false);
   const [errors, setErrors] = useState({});
 
   const validateField = (name, value) => {
@@ -29,17 +25,11 @@ export const CheckoutPage = () => {
         case 'email':
           newErrors.email = 'El email es requerido';
           break;
-        case 'address':
-          newErrors.address = 'La dirección es requerida';
+        case 'direccion':
+          newErrors.direccion = 'La dirección es requerida';
           break;
-        case 'postalCode':
-          newErrors.postalCode = 'El código postal es requerido';
-          break;
-        case 'city':
-          newErrors.city = 'La ciudad es requerida';
-          break;
-        case 'phone':
-          newErrors.phone = 'El teléfono es requerido';
+         case 'provincia':
+          newErrors.provincia = 'La provincia es requerida';
           break;
       }
     } else {
@@ -67,23 +57,15 @@ export const CheckoutPage = () => {
       newErrors.email = 'El email es requerido';
       hasErrors = true;
     }
-    if (!formData.address) {
-      newErrors.address = 'La dirección es requerida';
+    if (!formData.direccion) {
+      newErrors.direccion = 'La dirección es requerida';
       hasErrors = true;
     }
-    if (!formData.postalCode) {
-      newErrors.postalCode = 'El código postal es requerido';
+     if (!formData.provincia) {
+      newErrors.direccion = 'La provincia es requerida';
       hasErrors = true;
     }
-    if (!formData.city) {
-      newErrors.city = 'La ciudad es requerida';
-      hasErrors = true;
-    }
-    if (!formData.phone) {
-      newErrors.phone = 'El teléfono es requerido';
-      hasErrors = true;
-    }
-
+  
     // Actualizar los errores en el estado
     setErrors(newErrors);
     
@@ -99,15 +81,28 @@ export const CheckoutPage = () => {
 
   const { clearCart } = useContext(CartContext);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
+    const itemsCart = cart.map(({id, ...resto})=> resto)
+    const checkout = {
+      carrito: {
+        items:itemsCart,
+        total:finalprice.toString(),
+        provincia:formData.provincia,
+        email:formData.email,
+        direccion:formData.direccion
+      }
+    }
+   console.log(checkout)
+    let res = await axios.post('https://kamalionica-back.onrender.com/api/pedidos',checkout)
+    console.log(res)
     // Validar el formulario
     if (!validateForm()) {
       toast.error('¡Error! Por favor, completa todos los campos requeridos');
       return;
     }
-
+   
+    if(res.status == 200) {
     // Simular el proceso de pago
     setTimeout(() => {
       // Vaciar el carrito
@@ -119,6 +114,7 @@ export const CheckoutPage = () => {
       // Redirigir a la página de productos
       navigate('/products');
     }, 1000);
+  }
   };
 
 
@@ -141,91 +137,44 @@ export const CheckoutPage = () => {
               />
               {errors.email && <span className="error">{errors.email}</span>}
             </div>
-            <div className="form-group">
-              <label htmlFor="name">Nombre</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="lastName">Apellido</label>
-              <input
-                type="text"
-                id="lastName"
-                name="lastName"
-                value={formData.lastName}
-                onChange={handleChange}
-                required
-              />
-            </div>
           </div>
           <div className="form-section">
+             <h2>Provincia</h2>
+            <div className="form-group">
+              <label htmlFor="provincia">Provincia</label>
+              <input
+                type="text"
+                id="provincia"
+                name="provincia"
+                value={formData.provincia}
+                onChange={handleChange}
+                required
+              />
+              {errors.provincia && <span className="error">{errors.provincia}</span>}
+            </div>
+
             <h2>Dirección de Envío</h2>
             <div className="form-group">
-              <label htmlFor="address">Dirección</label>
+              <label htmlFor="direccion">Dirección</label>
               <input
                 type="text"
-                id="address"
-                name="address"
-                value={formData.address}
+                id="direccion"
+                name="direccion"
+                value={formData.direccion}
                 onChange={handleChange}
                 required
               />
-              {errors.address && <span className="error">{errors.address}</span>}
+              {errors.direccion && <span className="error">{errors.direccion}</span>}
             </div>
-            <div className="form-group">
-              <label htmlFor="postalCode">Código Postal</label>
-              <input
-                type="text"
-                id="postalCode"
-                name="postalCode"
-                value={formData.postalCode}
-                onChange={handleChange}
-                required
-              />
-              {errors.postalCode && <span className="error">{errors.postalCode}</span>}
-            </div>
-            <div className="form-group">
-              <label htmlFor="city">Ciudad</label>
-              <input
-                type="text"
-                id="city"
-                name="city"
-                value={formData.city}
-                onChange={handleChange}
-                required
-              />
-              {errors.city && <span className="error">{errors.city}</span>}
-            </div>
+
           </div>
-          <div className="form-section">
-            <h2>Contacto</h2>
-            <div className="form-group">
-              <label htmlFor="phone">Teléfono</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-              />
-              {errors.phone && <span className="error">{errors.phone}</span>}
-            </div>
-          </div>
+
           <div className="form-section">
             <h2>Métodos</h2>
             <div className="form-group">
               <label>Método de Envío</label>
               <select
                 name="shippingMethod"
-                value={formData.shippingMethod}
-                onChange={handleChange}
               >
                 <option value="standard">Estándar</option>
                 <option value="express">Express</option>
@@ -235,8 +184,6 @@ export const CheckoutPage = () => {
               <label>Método de Pago</label>
               <select
                 name="paymentMethod"
-                value={formData.paymentMethod}
-                onChange={handleChange}
               >
                 <option value="card">Tarjeta de Crédito</option>
                 <option value="transfer">Transferencia Bancaria</option>

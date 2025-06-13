@@ -10,7 +10,7 @@ import {Footer} from '../footer/Footer'
 export const ProductDetailPage = () => {
     const location = useLocation()
 const {open} = useCart()
-const { id ,titulo , image , ProductInfo , descripcion , precio, talles} = location.state || {}
+const { _id ,titulo , imagen , info , descripcion , precio, talles} = location.state || {}
 
 
 
@@ -20,8 +20,8 @@ const { id ,titulo , image , ProductInfo , descripcion , precio, talles} = locat
     {open == true ? <Cart/> : null}
       <div className="productdetail-container">
       { location.state != undefined ? <>
-        <ImageProductDetail img={image}/>
-        <ProductDetailContainer id={id}  img={image}  nombre={titulo} brevedescrip={ProductInfo} precio={precio} talles={talles} descripcion={descripcion} />
+        <ImageProductDetail img={imagen[1]}/>
+        <ProductDetailContainer id={_id}  img={imagen[0]}  nombre={titulo} brevedescrip={info} precio={precio} talles={talles} descripcion={descripcion} />
       </> 
       : <h4>No se encontro el producto!</h4>
       }

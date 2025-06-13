@@ -49,7 +49,7 @@ export const ProductDetailContainer = ({ id,  img , nombre , brevedescrip , prec
                 ))}
              
              </section>
-             <button className="btn-addToCart" onClick={()=>updateCart({id, img,nombre,precio})}>Añadir al carrito</button>
+             <button className="btn-addToCart" onClick={()=>updateCart({id, imagen:img,titulo:nombre,precio,info:brevedescrip})}>Añadir al carrito</button>
 
              <small>Envio gratuito a partir de AR $xxx.xxx</small>
              <section className="descripcion-container">

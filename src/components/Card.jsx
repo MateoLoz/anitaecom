@@ -12,8 +12,8 @@ export const Card = () => {
 const {itemsinPage} = useProducts()
 
 const handleDetail = (prod) => {
-const {id, titulo , image , ProductInfo , descripcion , precio, talles} = prod
-  navigate(href, {state:{id, titulo,image,ProductInfo,descripcion,precio,talles}})
+const {_id, titulo , imagen , info , descripcion , precio, talles} = prod
+  navigate(href, {state:{_id, titulo,imagen,info,descripcion,precio,talles}})
 }
 
 const [card,setcard] = useState(false)
@@ -51,11 +51,11 @@ return (
           itemsinPage.map((el)=>(
            
              <>
-                 <div key={el.id} className="box" onClick={()=> handleDetail(el)}>
-                <div className="card" id={el.id} >
-                <div className="image" id={`${el.id}-img`} onMouseEnter={()=>handleCard({id:`${el.id}-img1` , id2:`${el.id}-img2`})} onMouseLeave={()=> handleCard({id:`${el.id}-img1` , id2:`${el.id}-img2`})} >
-                 <img id={`${el.id}-img1`}  src={el.image[0]} alt="Banner del producto" />
-                 <img  className="card-desactive"  id={`${el.id}-img2`}  src={el.image[1]} alt="Banner del producto"/>
+                 <div key={el._id} className="box" onClick={()=> handleDetail(el)}>
+                <div className="card" id={el._id} >
+                <div className="image" id={`${el._id}-img`} onMouseEnter={()=>handleCard({id:`${el._id}-img1` , id2:`${el._id}-img2`})} onMouseLeave={()=> handleCard({id:`${el._id}-img1` , id2:`${el._id}-img2`})} >
+                 <img id={`${el._id}-img1`}  src={el.imagen[0]} alt="Banner del producto" />
+                 <img  className="card-desactive"  id={`${el._id}-img2`}  src={el.imagen[1]} alt="Banner del producto"/>
                 </div>
                 <div className="desc">
                   <h1 className="title-card">{el.titulo}</h1>

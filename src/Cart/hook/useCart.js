@@ -78,7 +78,7 @@ const removeItemCart = (id) => {
       arr.splice(index, 1);
       setCart(arr);
       localStorage.setItem('cart', JSON.stringify(arr));
-      getFinalPrice();
+      getFinalPrice(arr);
       updateCartCount('-');
       toast.success('¡Producto eliminado del carrito!');
     }
@@ -86,29 +86,9 @@ const removeItemCart = (id) => {
 
 const getFinalPrice = (state) => {
   
- if(!state){
-
- 
- let index =  cart.length 
- let arr = structuredClone(cart)
-
- let final = 0
-
-
- for(let i = 0 ; i < index; i++){
-    let number = Number(arr[i].precio)
-    final = final + number
- }
-
-  window.localStorage.setItem('final',JSON.stringify(final))
-   setFinalPrice(final)
- }
-
-
  if(state){
     let index =  state.length 
     let arr = structuredClone(state)
-   
     let final = 0
    
    

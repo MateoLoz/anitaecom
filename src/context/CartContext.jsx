@@ -15,7 +15,7 @@ const [size,setSize] = useState(initialStateSize)
 const [finalprice,setFinalPrice] = useState(initialFinalPrice)
 const [open,setOpen] = useState(initialStateModal)
 const [preference,setpreference] = useState(null)
-
+console.log(cart)
 // Función para vaciar el carrito
 const clearCart = () => {
   setCart([]);

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/api'; // URL base de tu API
+const API_URL = 'https://kamalionica-back.onrender.com/api'; // URL base de tu API
 
 export const productsService = {
   // Obtener todos los productos

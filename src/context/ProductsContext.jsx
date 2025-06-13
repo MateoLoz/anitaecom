@@ -1,10 +1,11 @@
 import { Children, createContext } from "react";
 import { useState } from "react";
-import Data from "../components/Data";
+import { initialProducts } from "../reducer/productreducer";
 export const ProductsContext = createContext()
 
 export function ProductsProvider  ({children})  {
-const initialState = JSON.parse(window.localStorage.getItem('filters')) || Data
+const initialState =  initialProducts
+
 const [products,setProducts] = useState(initialState)
 const itemsperpage = 10
 const rounded = () => {

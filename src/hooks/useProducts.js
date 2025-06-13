@@ -47,9 +47,9 @@ export function useProducts () {
     };
 
     // Cargar productos al montar el componente
-    useEffect(() => {
-        loadProducts();
-    }, []);
+    // useEffect(() => {
+    //     loadProducts();
+    // }, []);
 
     return {
         cambiarPagina,
